@@ -1,3 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration-style: none;
+  font-family: 'Courier New', monospace;
+}
+
 body {
-  background-color: lightblue;
+}
+
+#content {
+  background-color: #030303;
+  color: rgb(0 191 27);
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 120px 1fr 1fr 120px;
+}
+
+#pageHeaderCont {
+  grid-column: 2/3;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#pageHeader {
+  width: 100%;
+  font-size: 2.5em;
+}
+
+#decFormCont {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+#decForm {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr 0.5fr;
+}
+
+label.keyIn {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+input.keyIn {
+  background-color: #131313;
+  color: rgb(0 191 27);
+  grid-column: 2/ span 2;
+  padding: 4px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+label.texIn {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+textarea.texIn {
+  background-color: #131313;
+  color: rgb(0 191 27);
+  border: 1px solid grey;
+  border-radius: 4px;
+  grid-column: 2/span 4;
+  grid-row: 2/3;
+  resize: none;
+  padding: 4px;
+}
+
+#decBtn {
+  grid-column: 4/5;
+}
+
+#decBtn, #encBtn {
+  grid-row: 4/5;
+  background-color: #030303;
+  color: rgb(0 191 27);
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+#encBtn {
+  grid-column: 2/3;
+}
+
+#decBtn:hover, #encBtn:hover {
+  background-color: #131313;
+}
+
+#decBtn:active, #decBtn:active {
+  background-color: rgb(0 99 27);
+}
+
+#output {
+  grid-column: 2/3;
+  grid-row: 3/span 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 6fr;
+  text-wrap: wrap;
+}
+
+div.outHeader {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+}
+
+#outHeader {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+div.texOut {
+  background-color: #030303;
+  border: 1px solid rgb(0 191 27);
+  color: rgb(0 191 27);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+#texOut {
+  text-wrap: pretty;
 }
